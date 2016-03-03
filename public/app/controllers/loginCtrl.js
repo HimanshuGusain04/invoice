@@ -1,6 +1,6 @@
 var app = angular.module('LoginCtrlModule',['loginService']);
 
-app.controller('LoginCtrl', ['$scope','Login', function($scope, Login) {
+app.controller('LoginCtrl', ['$scope','Login',  'Auth', function($scope, Login, Auth) {
   
   
   // Submit function bound on "Submit" button on form
@@ -25,6 +25,8 @@ password: $scope.password
 
  // If successful print returned message form API else print error
 .success(function(data) {
+
+    Auth.setUser($scope.username);
             $scope.status = data.message;
             console.log($scope.status);
         })

@@ -10,9 +10,20 @@ angular.module('loginService', [])
 
 		return	$http.post('/api/login',loginData)
 	}
-
 	return	loginFactory;
 
-	
+})
 
+
+.factory('Auth', function(){
+var user;
+
+return{
+    setUser : function(aUser){
+        user = aUser;
+    },
+    isLoggedIn : function(){
+        return(user)? user : false;
+    }
+  }
 });

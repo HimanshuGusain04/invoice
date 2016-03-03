@@ -1,6 +1,6 @@
   <!-- Sidebar -->
         <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
+            <ul class="sidebar-nav" ng-controller="MainController">
                 <li class="sidebar-brand">            
                         <span>Invoice App - Steven</span>
                 </li>
@@ -23,12 +23,13 @@
                 <li>
                     <a href="#/contact">Contact</a>
                 </li>
-                <li>
+                <li ng-hide="loggedIn == true">
                     <a href="#/login">Admin Login</a>
                 </li>
-                 <li>
+
+                 <li ng-show="loggedIn == true">
                     <a href="#/add-new-invoice">Add new completed task</a>
-                </li>5
+                </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->

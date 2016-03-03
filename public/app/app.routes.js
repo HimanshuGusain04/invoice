@@ -17,19 +17,19 @@ app.config(['$routeProvider',
                 })
                 .when('/overview', {
                     templateUrl: 'app/views/overview.html',
-                    controller: 'MainController'
+                    controller: ''
                 })
                 .when('/archive', {
                     templateUrl: 'app/views/archive.html',
-                    controller: 'MainController'
+                    controller: ''
                 })
                 .when('/about-me', {
                     templateUrl: 'app/views/about.html',
-                    controller: 'MainController'
+                    controller: ''
                 })
                 .when('/contact', {
                     templateUrl: 'app/views/contact.html',
-                    controller: 'MainController'
+                    controller: ''
                 })
                 .when('/login', {
                     templateUrl: 'app/views/login.html',
