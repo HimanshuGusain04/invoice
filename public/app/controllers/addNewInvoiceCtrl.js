@@ -1,19 +1,21 @@
 // Dependacy added for the Invoice Factory
 var app = angular.module('addNewInvoiceModule',['invoiceService']);
 
+// Create controller and include Factory object
 app.controller('addNewInvoiceCtrl', function($scope, Invoice) {
   
+// Submit function bound on "Submit" button on form
 $scope.submit = function(form){
 
- // console.log(formData);
-
+// Check if form is valid
 if(form.$valid) {
 
-	console.log("Form valid")
+// Debug: console.log("Form valid")
 
+// Use Data-binding to build object to send to API
 var formData = {
 
-	taskname: $scope.taskname,
+taskname: $scope.taskname,
 taskdescription: $scope.taskdescription,
 platform: $scope.platform,
 clientname: $scope.clientname,
@@ -27,13 +29,13 @@ monthfilter: $scope.monthfilter,
 yearfilter: $scope.yearfilter,
 comments: $scope.comments
 
-
 }
 
 
-
-console.log(angular.toJson(form, true))
+// Call factory and submit the formData for processing
    Invoice.create(formData)
+
+ // If successful print returned message form API else print error
 .success(function(data) {
             $scope.status = data.message;
             console.log($scope.status);
@@ -42,10 +44,6 @@ console.log(angular.toJson(form, true))
             console.log('Error: ' + data);
         });
   }
-
-	
-
-  // console.log($scope);
 
 }
 
