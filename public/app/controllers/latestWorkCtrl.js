@@ -1,12 +1,16 @@
+// Dependacy added for the Invoice Factory
+
 var app = angular.module('LatestWorkCtrlModule',['invoiceService']);
 
+// Add the Factory name to the controller
 app.controller('LatestWorkCtrl', function($scope, Invoice) {
   
  $scope.User = {};
-        $scope.errorMessage = '';
+$scope.errorMessage = '';
 
-$scope.name = "testsasd";
+// $scope.name = "testsasd";
 
+// Access factory and assign the returned data
 Invoice.all()
 .success(function(data) {
             $scope.invoices = data;

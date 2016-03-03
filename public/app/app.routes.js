@@ -37,7 +37,7 @@ app.config(['$routeProvider',
                 })
                 .when('/add-new-invoice', {
                     templateUrl: 'app/views/add-new-invoice.html',
-                    controller: 'MainController'
+                    controller: 'addNewInvoiceCtrl'
                 })
               	.otherwise({
                     redirectTo: '/404',

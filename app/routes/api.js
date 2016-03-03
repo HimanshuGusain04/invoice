@@ -72,6 +72,9 @@ api.get('/invoices', function(req,res){
 // Post data to the database
 api.post('/new-invoice', function(req, res){
 
+
+console.log(req.body.dateassigned);
+
 	var invoice = new Invoice({
 
   taskName: req.body.taskname,
@@ -97,7 +100,7 @@ api.post('/new-invoice', function(req, res){
 			return
 		}
 
-		res.json({message:'Invoice saved API working'});
+		res.json({message:'Entry saved'});
 
 	});
 

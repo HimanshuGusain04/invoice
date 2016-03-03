@@ -1,19 +1,21 @@
 angular.module('invoiceService', [])
-  
 
-  .factory('Invoice', function($http){
+// Create Invoice Factory object
+.factory('Invoice', function($http){
 
-  	var invoiceFactory = {};
+	var invoiceFactory = {};
 
-  	invoiceFactory.create = function(invoiceData){
+// Create post factory to post data to api
+	invoiceFactory.create = function(invoiceData){
 
-  		return	$http.post('/api/new-invoice',invoiceData)
-  	}
+		return	$http.post('/api/new-invoice',invoiceData)
+	}
 
-invoiceFactory.all = function(){
-	return	$http.get('/api/invoices');
-}
+// Create get factory to retrieve data from api
+	invoiceFactory.all = function(){
+		return	$http.get('/api/invoices');
+	}
 
-return	invoiceFactory;
+	return	invoiceFactory;
 
 });
