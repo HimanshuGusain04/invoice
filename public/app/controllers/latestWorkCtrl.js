@@ -14,7 +14,7 @@ $scope.errorMessage = '';
 Invoice.all()
 .success(function(data) {
             $scope.invoices = data;
-            console.log(data);
+            // console.log(data);
         })
         .error(function(data) {
             console.log('Error: ' + data);

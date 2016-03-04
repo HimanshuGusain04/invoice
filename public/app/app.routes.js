@@ -21,7 +21,7 @@ app.config(['$routeProvider',
                 })
                 .when('/archive', {
                     templateUrl: 'app/views/archive.html',
-                    controller: ''
+                    controller: 'ArchiveCtrl'
                 })
                 .when('/about-me', {
                     templateUrl: 'app/views/about.html',
@@ -39,8 +39,25 @@ app.config(['$routeProvider',
                     templateUrl: 'app/views/add-new-invoice.html',
                     controller: 'addNewInvoiceCtrl'
                 })
+                 .when('/archive/2016', {
+                    templateUrl: 'app/views/archive2016.html',
+                    controller: 'ArchiveCtrl'
+                })
+                  .when('/archive/2016/:monthFilter', {
+                    templateUrl: 'app/views/archiveListing.html',
+                    controller: 'ArchiveCtrl'
+                })
+                   .when('/archive/2015', {
+                    templateUrl: 'app/views/archive2015.html',
+                    controller: 'ArchiveCtrl'
+                })
+                    .when('/archive/2015/:monthFilter', {
+                    templateUrl: 'app/views/archiveListing.html',
+                    controller: 'ArchiveCtrl'
+                })
               	.otherwise({
                     redirectTo: '/404',
                       templateUrl: 'app/views/404.html',
+                      controller: ''
                 });
         }]);
