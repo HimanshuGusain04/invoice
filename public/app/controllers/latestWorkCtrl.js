@@ -15,6 +15,8 @@ $scope.preloader = true;
 Invoice.all()
 .success(function(data) {
             $scope.invoices = data;
+            $scope.invoices.reverse()
+            // console.log($scope.invoices.reverse())
             $scope.preloader = false;
             // console.log(data);
         })
