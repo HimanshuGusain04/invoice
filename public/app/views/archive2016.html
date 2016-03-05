@@ -1,10 +1,9 @@
 <div class="col-lg-12">
 	<h1>Archive 2016</h1>
 
-	<a href="#">{{name}}</a>
+<div ng-if="preloader" class="text-center"><img src="http://orig06.deviantart.net/df77/f/2013/094/8/d/loading_logofinal_by_zegerdon-d60eb1v.gif" alt=""></div>
 
-
-	<div ng-repeat="month in months" class="col-md-4">
+	<div ng-repeat="month in months" class="col-md-3">
 
 		<month custom-month="month" filter-year="year" filter-month:"filterMonth"></month> 
 
@@ -19,5 +18,4 @@
 <br><br>
 </div> -->
 
-<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
 </div>

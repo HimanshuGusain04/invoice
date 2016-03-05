@@ -9,11 +9,13 @@ app.controller('LatestWorkCtrl', function($scope, Invoice) {
 $scope.errorMessage = '';
 
 // $scope.name = "testsasd";
+$scope.preloader = true;
 
 // Access factory and assign the returned data
 Invoice.all()
 .success(function(data) {
             $scope.invoices = data;
+            $scope.preloader = false;
             // console.log(data);
         })
         .error(function(data) {

@@ -8,7 +8,9 @@ app.controller('ArchiveCtrl', function($scope, Invoice, $routeParams, $location 
    $scope.User = {};
    $scope.errorMessage = '';
 
-   $scope.name = "testsasd222";
+   // $scope.name = "testsasd222";.
+
+   $scope.preloader = true;
 
 // Get the page location and strip the year. and month from it
 $scope.location = $location.path();
@@ -17,7 +19,7 @@ $scope.filterMonth = $scope.location.substr(14);
 
 // debug location
 // console.log($scope.year);
-console.log($scope.filterMonth);
+// console.log($scope.filterMonth);
 
 
 
@@ -25,6 +27,7 @@ console.log($scope.filterMonth);
 Invoice.all()
 .success(function(data) {
     $scope.invoices = data;
+    $scope.preloader = false;
 
 // Self activating function to get months
 $scope.months = [];

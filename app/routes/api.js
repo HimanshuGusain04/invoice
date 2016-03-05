@@ -28,25 +28,25 @@ module.exports = function(app, express){
 
 
 
-// Get data from the database
-api.get('/users', function(req,res){
+// // Get data from the database
+// api.get('/users', function(req,res){
 
-	User.find({}, function(err, users){
+// 	User.find({}, function(err, users){
 
-		if (err) {
+// 		if (err) {
 
-			res.send(err);
+// 			res.send(err);
 			
 			
-		} else {
-			res.json(users);
+// 		} else {
+// 			res.json(users);
 
-			// res.render("users", json(users));
-		}
+// 			// res.render("users", json(users));
+// 		}
 
-	});
+// 	});
 
-});
+// });
 
 
 // Get invoices data from the database
@@ -73,7 +73,7 @@ api.get('/invoices', function(req,res){
 api.post('/new-invoice', function(req, res){
 
 
-console.log(req.body.dateassigned);
+// console.log(req.body.dateassigned);
 
 	var invoice = new Invoice({
 

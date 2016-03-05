@@ -4,9 +4,9 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-/* Toggle Styles */
+ /* Toggle Styles */
 
-#wrapper {
+ #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -102,30 +102,47 @@
     text-align: left;
 }
 
-@media(min-width:768px) {
-    #wrapper {
-        padding-left: 250px;
-    }
 
-    #wrapper.toggled {
-        padding-left: 0;
-    }
+/*New Styles - 05 March 2016*/
+a {text-decoration: none;color:#000;margin-top:20px;}
+.box {border:1px solid #c3c3c3; padding: 20px;}
+.box:hover {
+    -webkit-transition: all .50s ease;
+    -moz-transition: all .50s ease;
+    -ms-transition: all .50s ease;
+    -o-transition: all .50s ease;
+    transition: all .50s ease;
+    border:1px solid #000; 
+    padding: 20px; 
+    background-color: #000; 
+    color:#fff;}
 
-    #sidebar-wrapper {
-        width: 250px;
-    }
+    .menuWrapper {}
 
-    #wrapper.toggled #sidebar-wrapper {
-        width: 0;
-    }
+    @media(min-width:768px) {
+        #wrapper {
+            padding-left: 250px;
+        }
 
-    #page-content-wrapper {
-        padding: 20px;
-        position: relative;
-    }
+        #wrapper.toggled {
+            padding-left: 0;
+        }
 
-    #wrapper.toggled #page-content-wrapper {
-        position: relative;
-        margin-right: 0;
+        #sidebar-wrapper {
+            width: 250px;
+        }
+
+        #wrapper.toggled #sidebar-wrapper {
+            width: 0;
+        }
+
+        #page-content-wrapper {
+            padding: 20px;
+            position: relative;
+        }
+
+        #wrapper.toggled #page-content-wrapper {
+            position: relative;
+            margin-right: 0;
+        }
     }
-}

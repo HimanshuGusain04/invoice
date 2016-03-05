@@ -10,7 +10,7 @@ app.directive('month', function() {
      link: function(scope, element, attrs) {
     // here is the problem, data is really undefined
     // console.log(scope.customMonth);
-    console.log(scope);
+    // console.log(scope);
 }
   }; 
 });

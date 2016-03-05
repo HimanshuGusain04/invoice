@@ -7,7 +7,7 @@ app.directive('taskpanel', function() {
     templateUrl: 'app/views/partials/taskPanel.html',
      link: function(scope, element, attrs) {
     // here is the problem, data is really undefined
-    console.log(scope.customInvoiceData);
+    // console.log(scope.customInvoiceData);
 }
   }; 
 });

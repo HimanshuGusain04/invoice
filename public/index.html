@@ -20,9 +20,9 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
     
-<!-- Services -->
-<script type="text/javascript" src="app/services/invoiceService.js"></script>
-<script type="text/javascript" src="app/services/loginService.js"></script>
+    <!-- Services -->
+    <script type="text/javascript" src="app/services/invoiceService.js"></script>
+    <script type="text/javascript" src="app/services/loginService.js"></script>
     
     <!-- Controllers -->
     <script type="text/javascript" src="app/app.routes.js"></script>
@@ -31,15 +31,15 @@
     <script type="text/javascript" src="app/controllers/loginCtrl.js"></script>
     <script type="text/javascript" src="app/controllers/addNewInvoiceCtrl.js"></script>
     <script type="text/javascript" src="app/controllers/archiveCtrl.js"></script>
-
+    <script type="text/javascript" src="app/controllers/searchCtrl.js"></script>
 
 
     <script type="text/javascript" src="app/directives/navbar.js"></script>
-     <script type="text/javascript" src="app/directives/archivePanel.js"></script>
-     <script type="text/javascript" src="app/directives/month.js"></script>
-      <script type="text/javascript" src="app/directives/taskPanel.js"></script>
-     <script type="text/javascript" src="app/directives/test.js"></script>
-      <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/directives/archivePanel.js"></script>
+    <script type="text/javascript" src="app/directives/month.js"></script>
+    <script type="text/javascript" src="app/directives/taskPanel.js"></script>
+    <script type="text/javascript" src="app/directives/test.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,47 +51,42 @@
     </head>
 
     <body ng-app="invoiceApp">
-    <div ng-controller="MainController">
-        Debug angular - {{2 + 2}}
-        <div id="wrapper">
+        <div ng-controller="MainController">
+            <div id="wrapper">
 
-            <navbar></navbar>
+                <navbar></navbar>
 
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
 
+                            <div class="ng-view"></div>
 
-            <!-- Page Content -->
-            <div id="page-content-wrapper">
-                <div class="container-fluid">
-                    <div class="row">
-                    
-                        <div class="ng-view"></div>
+   <a class="btn btn-default" id="menu-toggle" ng-click="expression">Toggle Menu</a>
 
+                        </div>
                     </div>
                 </div>
+                <!-- /#page-content-wrapper -->
+
+
             </div>
-            <!-- /#page-content-wrapper -->
-
-
-
-
-
-
-
-
-
-
-        </div>
-        <!-- /#wrapper -->
+            <!-- /#wrapper -->
         </div>
 
         <!-- jQuery -->
         <script src="js/jquery.js"></script>
+
+
 
         <!-- Bootstrap Core JavaScript -->
         <script src="js/bootstrap.min.js"></script>
 
         <!-- Custom -->
         <script src="js/custom.js"></script>
+
+
 
         
     </body>
