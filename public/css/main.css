@@ -104,6 +104,7 @@
 
 
 /*New Styles - 05 March 2016*/
+h1 {margin-bottom: 20px;}
 a {
     text-decoration: none;color:#000;
     margin-top:20px;
@@ -136,6 +137,7 @@ div.searchWrapper {margin-bottom: 40px;}
 .panel-default>.panel-heading {color: #fff;
     background-color: #000;}
 
+#menu-toggle {margin-left:20px; margin-bottom:40px;}
 
 /*Media Queries*/
 @media(min-width:768px) {
