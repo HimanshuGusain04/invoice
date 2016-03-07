@@ -5,19 +5,19 @@
 
   <!-- List group -->
   <ul class="list-group">
-    <li class="list-group-item">Task name: {{customInvoiceData.taskName}}</li>
-    <li class="list-group-item">Task Description: {{customInvoiceData.taskDescription}}</li>
-    <li class="list-group-item">Platform: {{customInvoiceData.platform}}</li>
-    <li class="list-group-item">Client name: {{customInvoiceData.clientName}}</li>
-    <li class="list-group-item">URL: {{customInvoiceData.url}}</li>
-    <li class="list-group-item">Work Done: {{customInvoiceData.workDone}}</li>
-    <li class="list-group-item">Hours: {{customInvoiceData.hours}}</li>
-    <li ng-show="{{ if (customInvoiceData.assignedBy)}}"class="list-group-item">Assigned by:  {{customInvoiceData.assignedBy}}</li>
-    <li class="list-group-item">Date Assigned: {{customInvoiceData.dateAssigned| date:dateFormat}}</li>
-    <li ng-show="{{ if (customInvoiceData.comments)}}" class="list-group-item">Comments: {{customInvoiceData.comments}}</li>
+    <li class="list-group-item"><strong>Task name:</strong> {{customInvoiceData.taskName}}</li>
+    <li class="list-group-item"><strong>Task Description:</strong> {{customInvoiceData.taskDescription}}</li>
+    <li class="list-group-item"><strong>Platform:</strong> {{customInvoiceData.platform}}</li>
+    <li class="list-group-item"><strong>Client name:</strong> {{customInvoiceData.clientName}}</li>
+    <li class="list-group-item"><strong>URL:</strong> {{customInvoiceData.url}}</li>
+    <li class="list-group-item"><strong>Work Done:</strong> {{customInvoiceData.workDone}}</li>
+    <li class="list-group-item"><strong>Hours:</strong> {{customInvoiceData.hours}}</li>
+    <li ng-show="{{ if (customInvoiceData.assignedBy)}}"class="list-group-item"><strong>Assigned by:</strong>  {{customInvoiceData.assignedBy}}</li>
+    <li class="list-group-item"><strong>Date Assigned: </strong>{{customInvoiceData.dateAssigned| date:dateFormat}}</li>
+    <li ng-show="{{ if (customInvoiceData.comments)}}" class="list-group-item"><strong>Comments:</strong> {{customInvoiceData.comments}}</li>
 
   </ul>
 
-  <div class="panel-footer">Date Completed: {{customInvoiceData.dateCompleted| date:dateFormat}}</div>
+  <div class="panel-footer"><strong>Date Completed:</strong> {{customInvoiceData.dateCompleted| date:dateFormat}}</div>
 </div>
 
