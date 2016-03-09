@@ -12,9 +12,9 @@
     <li class="list-group-item"><strong>URL:</strong> {{customInvoiceData.url}}</li>
     <li class="list-group-item"><strong>Work Done:</strong> {{customInvoiceData.workDone}}</li>
     <li class="list-group-item"><strong>Hours:</strong> {{customInvoiceData.hours}}</li>
-    <li ng-show="{{ if (customInvoiceData.assignedBy)}}"class="list-group-item"><strong>Assigned by:</strong>  {{customInvoiceData.assignedBy}}</li>
+    <li class="list-group-item"><strong>Assigned by:</strong>  {{customInvoiceData.assignedBy}}</li>
     <li class="list-group-item"><strong>Date Assigned: </strong>{{customInvoiceData.dateAssigned| date:dateFormat}}</li>
-    <li ng-show="{{ if (customInvoiceData.comments)}}" class="list-group-item"><strong>Comments:</strong> {{customInvoiceData.comments}}</li>
+    <li ng-show="customInvoiceData.comments" class="list-group-item"><strong>Comments:</strong> {{customInvoiceData.comments}}</li>
 
   </ul>
 
