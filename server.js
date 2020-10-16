@@ -60,18 +60,33 @@ app.get('/api', function (req, res) {
 
 // Invoice page
 app.get('/invoice', function (req, res) {
+   const Invoice = require('./models/Invoice')
+   Invoice.find()
+	.then(doc => {
+	   res.json(doc)
+   }).catch(err=> {
+	   res.json(err)
+   })
    
 });
 
 // Search page
-app.get('/search', function (req, res) {
-   
+app.get('/search/:q', function (req, res) {
+   const Invoice = require('./models/Invoice')
+   Invoice.find({
+   name:{$regex: res.params.q, $options: "i"}
+        })
+	.then(doc => {
+	   res.json(doc)
+   }).catch(err=> {
+	   res.json(err)
+   })
 });
 
 // 404 page
-app.get('*', function(req, res){
+// app.get('*', function(req, res){
    
-});
+// });
 
 
 // Start server
